@@ -116,16 +116,25 @@ A cybersecurity tool designed for www.spacetravel.com that:
 This tool is designed to demonstrate security logging practices in different programming languages.
 
 ### Space Journey Calculator
-An interactive tool that calculates travel duration to space destinations:
+An interactive tool that calculates travel duration to space destinations with enhanced user interface features:
 
-- Prompts for the traveler's name for a personalized experience
-- Accepts user input for travel velocity (in km/h)
-- Offers destination options: Moon (384,400 km) or Mars (225,000,000 km)
-- Calculates journey duration using the formula: distance ÷ velocity
-- Presents results in multiple time formats (hours and days/hours/minutes)
-- Features colorful text formatting and ASCII art for enhanced user experience
+#### User Input Features
+- Provides clear, user-friendly prompts with examples (e.g., "Enter your name (e.g., John Smith)")
+- Collects traveler's name and country of origin with example guidance
+- Validates year input with specified ranges (e.g., "Enter the year (2025-2055)")
+- Accepts travel velocity with unit specification (km/h) and contextual examples
+- Offers destination options with clear distance information
 
-The calculator demonstrates practical application of mathematical formulas in an engaging, user-friendly interface designed for space travel planning.
+#### Output Formatting Features
+- Displays distances with commas for readability and appropriate units (km)
+- Shows velocities with exactly two decimal places and appropriate units (km/h)
+- Presents durations in multiple formats with five decimal places:
+  - Hours, days, months, and years with appropriate units
+  - Plain English description of travel time
+- Formats monetary values with currency symbols and two decimal places
+- Displays dates in ISO standard year-month-day format (YYYY-MM-DD)
+
+The calculator demonstrates practical application of mathematical formulas in an engaging, user-friendly interface while adhering to output formatting best practices for data clarity and consistency.
 
 ---
 

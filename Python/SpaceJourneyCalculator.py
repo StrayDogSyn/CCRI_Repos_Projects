@@ -29,23 +29,52 @@ def calculate_space_journey():
               /___/_/                                                              
     """
     print("\033[96m" + header + "\033[0m")  # Cyan color on most terminals
-    
-    # Define the distances (in kilometers)
+      # Define the distances (in kilometers)
     distance_to_moon = 384400
     distance_to_mars = 225000000
-    
-    # Get user's name
+      # Get user's name with example
     print("\033[92m\nWelcome to the Space Journey Calculator!\033[0m")
-    traveler_name = input("Please enter your name: ")
+    traveler_name = input("Please enter your name (e.g., Jane Smith): ")
+    
+    # Get country with examples
+    country = input("Please enter your country (e.g., United States, Canada, Mexico): ")
     
     # Greet the user by name
-    print(f"\033[93m\nHello, {traveler_name}! Let's plan your space journey.\033[0m")
+    print(f"\033[93m\nHello, {traveler_name} from {country}! Let's plan your space journey.\033[0m")
     
-    # Velocity input with validation
+    # Get today's date for the journey
+    from datetime import datetime, timedelta
+    today = datetime.now()
+    print(f"\nToday's date is {today.strftime('%Y-%m-%d')}.")
+    
+    # Year selection with range validation
+    current_year = today.year
+    valid_year = False
+    while not valid_year:
+        try:
+            year_input = input(f"\nEnter the year of travel ({current_year}-{current_year+30}): ")
+            year = int(year_input)
+            
+            if year < current_year or year > (current_year + 30):
+                print(f"\033[91mYear must be between {current_year} and {current_year+30}.\033[0m")
+            else:
+                valid_year = True
+        except ValueError:
+            print("\033[91mInvalid input. Please enter a valid year.\033[0m")
+    
+    # Calculate travel date
+    travel_date = datetime(year, today.month, today.day)
+    print(f"\nYour journey is planned for: {travel_date.strftime('%Y-%m-%d')}")
+    days_till_travel = (travel_date - today).days
+    
+    if days_till_travel > 0:
+        print(f"That's {days_till_travel} days from today.")
+    
+    # Velocity input with validation and examples
     valid_velocity = False
     while not valid_velocity:
         try:
-            velocity = float(input("\nPlease enter your travel velocity (in km/h): "))
+            velocity = float(input("\nPlease enter your travel velocity (in km/h, e.g., 50000 for spacecraft, 1000 for airplane): "))
             if velocity <= 0:
                 print("\033[91mVelocity must be greater than zero.\033[0m")
                 continue
@@ -73,14 +102,25 @@ def calculate_space_journey():
     else:
         destination = "Mars"
         distance = distance_to_mars
-    
-    # Perform calculation (distance / velocity)
+      # Perform calculation (distance / velocity)
     duration_hours = distance / velocity
     
-    # Convert to days, hours, minutes for better readability
-    duration_days = math.floor(duration_hours / 24)
-    remaining_hours = math.floor(duration_hours % 24)
-    remaining_minutes = math.floor((duration_hours * 60) % 60)
+    # Convert to various time formats for better understanding
+    duration_days = duration_hours / 24
+    duration_months = duration_days / 30.44  # Average month length
+    duration_years = duration_days / 365.25  # Account for leap years
+    
+    # Format remaining hours and minutes for display
+    whole_days = math.floor(duration_days)
+    whole_hours = math.floor(duration_hours % 24)
+    whole_minutes = math.floor((duration_hours * 60) % 60)
+    
+    # Calculate arrival date
+    from datetime import timedelta
+    arrival_date = travel_date + timedelta(hours=duration_hours)
+    
+    # Calculate journey cost (fictional rate of $1000 per million km)
+    journey_cost = (distance / 1000000) * 1000
     
     # Add a bit of animation for the calculation
     print("\n\033[93mCalculating journey duration", end="")
@@ -89,17 +129,29 @@ def calculate_space_journey():
         time.sleep(0.3)
     print("\033[0m\n")
     
-    # Generate the result message
+    # Generate the result message with proper formatting
     result_message = f"""
 \033[92m===== SPACE TRAVEL JOURNEY CALCULATION =====
 Traveler: {traveler_name}
+Country: {country}
+Travel Date: {travel_date.strftime('%Y-%m-%d')}
 Destination: {destination}
-Distance: {distance:,} kilometers
+Distance: {distance:,.0f} km
 Velocity: {velocity:,.2f} km/h
 
-Estimated Journey Duration:
-- Total Hours: {duration_hours:,.2f} hours
-- In Days/Hours/Minutes: {duration_days} days, {remaining_hours} hours, {remaining_minutes} minutes
+Estimated Journey Details:
+- Duration: {duration_hours:.5f} hours
+           {duration_days:.5f} days
+           {duration_months:.5f} months
+           {duration_years:.5f} years
+
+- Plain English: Your journey to the {destination} will take approximately
+  {whole_days} days, {whole_hours} hours, and {whole_minutes} minutes
+  at your selected speed of {velocity:,.2f} km/h.
+
+- Estimated Arrival: {arrival_date.strftime('%Y-%m-%d %H:%M')}
+
+- Estimated Cost: ${journey_cost:,.2f}
 ============================================\033[0m
 """
     
