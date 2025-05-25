@@ -20,14 +20,20 @@ CCRI_Repos_Projects/
 ├── PowerShell/
 │   ├── Enterprise.ps1
 │   ├── UserLogger.ps1
-│   └── SpaceJourneyCalculator.ps1
+│   ├── SpaceJourneyCalculator.ps1
+│   ├── EnhancedSpaceJourneyCalculator.ps1
+│   ├── SpaceData.psm1
+│   └── SpaceLogger.psm1
 ├── Bash/
 │   ├── enterprise.sh
 │   └── UserLogger.sh
 └── Python/
     ├── enterprise.py
     ├── UserLogger.py
-    └── SpaceJourneyCalculator.py
+    ├── SpaceJourneyCalculator.py
+    ├── EnhancedSpaceJourneyCalculator.py
+    ├── space_data.py
+    └── space_logger.py
 ```
 
 ## How to Run
@@ -80,16 +86,32 @@ python UserLogger.py
 
 ### Space Journey Calculator
 
-#### PowerShell Version
+#### Standard Versions
+
+##### PowerShell Version
 ```powershell
 cd PowerShell
 .\SpaceJourneyCalculator.ps1
 ```
 
-#### Python Version
+##### Python Version
 ```python
 cd Python
 python SpaceJourneyCalculator.py
+```
+
+#### Enhanced Versions (New!)
+
+##### PowerShell Enhanced Version
+```powershell
+cd PowerShell
+.\EnhancedSpaceJourneyCalculator.ps1
+```
+
+##### Python Enhanced Version
+```python
+cd Python
+python EnhancedSpaceJourneyCalculator.py
 ```
 
 ## Project Details
@@ -116,25 +138,44 @@ A cybersecurity tool designed for www.spacetravel.com that:
 This tool is designed to demonstrate security logging practices in different programming languages.
 
 ### Space Journey Calculator
-An interactive tool that calculates travel duration to space destinations with enhanced user interface features:
+An interactive tool that calculates travel duration to space destinations with enhanced user interface features. Available in both standard and enhanced versions.
 
-#### User Input Features
+#### Standard Version Features
 - Provides clear, user-friendly prompts with examples (e.g., "Enter your name (e.g., John Smith)")
 - Collects traveler's name and country of origin with example guidance
 - Validates year input with specified ranges (e.g., "Enter the year (2025-2055)")
 - Accepts travel velocity with unit specification (km/h) and contextual examples
 - Offers destination options with clear distance information
+- Formats output with appropriate units and decimal precision
 
-#### Output Formatting Features
-- Displays distances with commas for readability and appropriate units (km)
-- Shows velocities with exactly two decimal places and appropriate units (km/h)
-- Presents durations in multiple formats with five decimal places:
-  - Hours, days, months, and years with appropriate units
-  - Plain English description of travel time
-- Formats monetary values with currency symbols and two decimal places
-- Displays dates in ISO standard year-month-day format (YYYY-MM-DD)
+#### Enhanced Version Features (New!)
+- **Advanced Input Validation:**
+  - Comprehensive error handling with clear explanations for out-of-range values
+  - Detailed guidance when input is rejected (e.g., reasons why a velocity exceeds limits)
+  - Structured prompts with examples and context-sensitive help
 
-The calculator demonstrates practical application of mathematical formulas in an engaging, user-friendly interface while adhering to output formatting best practices for data clarity and consistency.
+- **Structured Data Model:**
+  - Planetary Bodies (fixed data) including Moon, Mars, Venus, and Mercury
+  - Transportation Vehicles (variable data) with different specifications
+  - Clear separation between fixed astronomical data and changeable vehicle specifications
+
+- **Robust Logging System:**
+  - Multi-level logging (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+  - Console output with color-coding by severity level
+  - File logging for persistent record-keeping
+  - Detailed journey records with timestamps and user information
+
+- **Enhanced Error Handling:**
+  - Graceful error recovery
+  - User-friendly error messages
+  - Technical details logged for debugging
+
+- **Professional Output:**
+  - Comprehensive journey reports with clearly formatted sections
+  - Calculation of fuel requirements and estimated costs
+  - Plain English explanations of technical calculations
+
+The enhanced calculator demonstrates advanced software development practices while maintaining an engaging, user-friendly interface.
 
 ---
 
