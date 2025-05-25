@@ -10,19 +10,24 @@ Displays ASCII art of the Constitution Class USS Enterprise (NCC-1701) in three 
 ### 2. User Activity Logger
 A cybersecurity tool for www.spacetravel.com that logs user activities with detailed, personalized output.
 
+### 3. Space Journey Calculator
+An innovative tool that calculates the duration of travel to the Moon or Mars based on the traveler's specified velocity.
+
 ## Project Structure
 
 ```
 CCRI_Repos_Projects/
 ├── PowerShell/
 │   ├── Enterprise.ps1
-│   └── UserLogger.ps1
+│   ├── UserLogger.ps1
+│   └── SpaceJourneyCalculator.ps1
 ├── Bash/
 │   ├── enterprise.sh
 │   └── UserLogger.sh
 └── Python/
     ├── enterprise.py
-    └── UserLogger.py
+    ├── UserLogger.py
+    └── SpaceJourneyCalculator.py
 ```
 
 ## How to Run
@@ -73,6 +78,20 @@ cd Python
 python UserLogger.py
 ```
 
+### Space Journey Calculator
+
+#### PowerShell Version
+```powershell
+cd PowerShell
+.\SpaceJourneyCalculator.ps1
+```
+
+#### Python Version
+```python
+cd Python
+python SpaceJourneyCalculator.py
+```
+
 ## Project Details
 
 ### USS Enterprise ASCII Art
@@ -95,6 +114,18 @@ A cybersecurity tool designed for www.spacetravel.com that:
 - Generates a detailed log message and saves it to a log file
 
 This tool is designed to demonstrate security logging practices in different programming languages.
+
+### Space Journey Calculator
+An interactive tool that calculates travel duration to space destinations:
+
+- Prompts for the traveler's name for a personalized experience
+- Accepts user input for travel velocity (in km/h)
+- Offers destination options: Moon (384,400 km) or Mars (225,000,000 km)
+- Calculates journey duration using the formula: distance ÷ velocity
+- Presents results in multiple time formats (hours and days/hours/minutes)
+- Features colorful text formatting and ASCII art for enhanced user experience
+
+The calculator demonstrates practical application of mathematical formulas in an engaging, user-friendly interface designed for space travel planning.
 
 ---
 
