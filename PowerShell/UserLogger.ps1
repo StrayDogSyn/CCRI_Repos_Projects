@@ -1,7 +1,7 @@
 # User Activity Logger - PowerShell Version
 # For www.spacetravel.com cybersecurity
 
-function Log-UserActivity {
+function Write-UserActivity {
     # Get current date and time
     $currentDateTime = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
     
@@ -46,4 +46,4 @@ User Details:
 }
 
 # Call the function to log user activity
-Log-UserActivity
+Write-UserActivity

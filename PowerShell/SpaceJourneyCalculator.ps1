@@ -2,7 +2,7 @@
 # For www.spacetravel.com innovative solutions
 # Created: May 25, 2025
 
-function Calculate-SpaceJourney {
+function Measure-SpaceJourney {
     # Clear the screen for better user experience
     Clear-Host
     
@@ -163,7 +163,7 @@ Estimated Journey Details:
     # Option to calculate another journey
     $anotherJourney = Read-Host "Would you like to calculate another journey? (y/n)"
     if ($anotherJourney -eq "y" -or $anotherJourney -eq "Y") {
-        Calculate-SpaceJourney
+        Measure-SpaceJourney
     }
     else {
         Write-Host "`nThank you for using the Space Journey Calculator!" -ForegroundColor Yellow
@@ -172,4 +172,4 @@ Estimated Journey Details:
 }
 
 # Start the calculation
-Calculate-SpaceJourney
+Measure-SpaceJourney

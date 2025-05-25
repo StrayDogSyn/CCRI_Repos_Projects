@@ -1,5 +1,37 @@
 # CCRI Programming Projects
 
+## Introduction
+
+![Developer Banner](https://img.shields.io/badge/Developer-Eric%20'Hunter'%20Petross-blue?style=for-the-badge&logo=github)
+
+Hello! I'm Eric 'Hunter' Petross, a versatile developer with expertise in multiple programming languages and technologies. This repository showcases a collection of projects completed for the Community College of Rhode Island programming curriculum.
+
+### About Me
+I specialize in JavaScript, Python, HTML/CSS, and scripting languages with a strong foundation in:
+
+- **Software Development**: Creating efficient, maintainable code across multiple platforms
+- **AI/ML**: Working with Large Language Models and AI-powered applications
+- **Web Development**: Building responsive front-end and full-stack applications
+- **Content Creation**: Developing AI-enhanced content workflows and systems
+- **UI/UX Design**: Developing intuitive interfaces with comprehensive validation and user guidance
+
+My programming approach focuses on creating robust, user-friendly applications with comprehensive error handling, detailed logging, and intuitive interfaces. I'm a detail-oriented developer passionate about merging code with creativity, as demonstrated by several projects in this repository.
+
+### Technical Skills
+
+```
+Languages:      JavaScript | HTML/CSS | Python | SQL | VBA
+Tools:          VS Code | Git | WordPress | Wix | Shopify
+Frameworks:     React | Node.js | Express.js | Tailwind CSS | Bootstrap
+Methodologies:  Agile | UX/UI Design | A/B Testing | Technical Writing
+```
+
+### Connect With Me
+- 🚀 GitHub: [StrayDogSyn](https://github.com/StrayDogSyn)
+- 🌐 Website: [Straydog Syndications LLC](https://www.straydog-syndications-llc.com)
+- 📧 Email: straydogsyndicationsllc@gmail.com
+- 💼 LinkedIn: [Eric Petross](https://www.linkedin.com/in/eric-petross-766a08330)
+
 This repository contains programming assignments for the Community College of Rhode Island.
 
 ## Projects
@@ -177,6 +209,27 @@ An interactive tool that calculates travel duration to space destinations with e
 
 The enhanced calculator demonstrates advanced software development practices while maintaining an engaging, user-friendly interface.
 
+## Future Development
+
+I'm constantly working to improve these projects and develop new ones. Some planned enhancements include:
+
+- Adding more celestial bodies to the Space Journey Calculator
+- Creating a web-based interface for the calculators
+- Implementing additional authentication and security features
+- Expanding the logging capabilities with database integration
+
+## Contributions & Feedback
+
+I welcome contributions, suggestions, and feedback on any of these projects! Feel free to:
+
+1. Open an issue for bugs or feature requests
+2. Submit pull requests with improvements
+3. Contact me directly with questions or collaboration ideas
+
+## License
+
+This project is licensed under the terms of the MIT license. See the [LICENSE](LICENSE) file for details.
+
 ---
 
-Community College of Rhode Island - Programming Assignments (2025)
+© 2025 Eric 'Hunter' Petross | [Straydog Syndications LLC](https://www.straydog-syndications-llc.com) | Community College of Rhode Island
