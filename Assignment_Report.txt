@@ -1,0 +1,175 @@
+========================================
+Assignment Report
+========================================
+
+========================================
+Problem Definition
+========================================
+The problem involves developing a set of tools for space-themed applications in multiple programming languages (PowerShell, Bash, and Python), including:
+
+1. USS Enterprise ASCII Art Generator: Creating visual representations of the USS Enterprise (NCC-1701) using ASCII characters in three different programming languages.
+
+2. User Activity Logger for www.spacetravel.com: Implementing a cybersecurity logging system that captures user information, timestamps, and system data across multiple platforms.
+
+3. Space Journey Calculator: Developing a tool to calculate travel time between Earth and celestial destinations based on user-defined parameters like velocity.
+
+========================================
+Assumptions
+========================================
+1. Users will run these scripts in environments with PowerShell, Bash, or Python installed with appropriate permissions.
+
+2. Terminal/console output supports ASCII rendering with monospace fonts for proper display of the Enterprise ASCII art.
+
+3. The system has network access to retrieve IP address information for the logging component.
+
+4. User environment variables are accessible to the scripts for retrieving username and system information.
+
+5. Users have basic knowledge of terminal/command line interfaces to execute the provided scripts.
+
+6. File write permissions are available for scripts that create log files.
+
+========================================
+Solution Description
+========================================
+The solution comprises multiple scripts organized by programming language:
+
+1. USS Enterprise ASCII Art:
+   - Implemented in PowerShell (Enterprise.ps1), Bash (enterprise.sh), and Python (enterprise.py)
+   - Each script displays an ASCII representation of the USS Enterprise using monospace characters
+   - Special attention was given to proper character alignment and spacing for visual clarity
+
+2. User Activity Logger:
+   - Implemented in PowerShell (UserLogger.ps1), Bash (UserLogger.sh), and Python (UserLogger.py)
+   - Each implementation:
+     * Retrieves the current username from system environment variables
+     * Attempts to get full name information where available
+     * Records current timestamp in consistent format
+     * Captures system information (hostname, IP address)
+     * Generates formatted logs with consistent styling
+     * Writes logs to both console and persistent storage (text files)
+
+3. Space Journey Calculator:
+   - Basic implementations in PowerShell (SpaceJourneyCalculator.ps1) and Python (SpaceJourneyCalculator.py)
+   - Enhanced versions with additional features (EnhancedSpaceJourneyCalculator.ps1/py)
+   - Features include:
+     * Structured data models for planetary bodies and vehicles
+     * Input validation with error handling
+     * Comprehensive logging systems
+     * User-friendly interface with clear prompts
+     * Detailed output formatting for calculations
+
+4. Supporting Modules:
+   - SpaceData.psm1/space_data.py: Contain planetary data and vehicle specifications
+   - SpaceLogger.psm1/space_logger.py: Provide advanced logging functionality
+
+========================================
+Notes
+========================================
+1. The Enhanced Space Journey Calculator demonstrates more advanced programming concepts including:
+   - Object-oriented design
+   - Modular architecture with separate data and logging components
+   - Comprehensive error handling
+   - Multi-level logging with color coding by severity
+
+2. For optimal ASCII art display, a monospace font should be configured in the terminal.
+
+3. All code is well-commented for maintainability and educational purposes.
+
+4. The logger implementations demonstrate cybersecurity best practices by capturing relevant user and system information.
+
+5. Future enhancements could include web interfaces, database integration for logs, and additional celestial bodies.
+
+========================================
+Test Case #1: USS Enterprise ASCII Art
+========================================
+Test Input:
+Execution of Enterprise rendering scripts in each language:
+- PowerShell: .\Enterprise.ps1
+- Bash: bash enterprise.sh
+- Python: python enterprise.py
+
+Test Output:
+ASCII representation of the USS Enterprise (NCC-1701) displayed in terminal with proper alignment and formatting. The art appears identical across all three language implementations despite the different underlying code.
+
+Test Assumptions:
+- Terminal configured with monospace font
+- Terminal window sized appropriately to display the full ASCII art
+- Scripts executed from their respective language directories
+
+Test Results:
+Success - The Enterprise ASCII art displayed correctly in all three language implementations with consistent visual appearance.
+
+========================================
+Test Case #2: User Activity Logger
+========================================
+Test Input:
+Execution of logging scripts in each language:
+- PowerShell: .\UserLogger.ps1
+- Bash: bash UserLogger.sh
+- Python: python UserLogger.py
+
+Test Output:
+1. Console display showing formatted log with:
+   - "SPACE TRAVEL CYBERSECURITY LOG" header
+   - Current date and time
+   - Username
+   - Full name (if available)
+   - Computer name
+   - IP address
+2. Creation of a log file in the same directory with identical information
+
+Test Assumptions:
+- Scripts have access to environment variables
+- Network interface available for IP address determination
+- Write permissions for log file creation
+
+Test Results:
+Success - All logger implementations correctly gathered user information, displayed formatted logs to console, and created persistent log files with appropriate timestamps.
+
+========================================
+Test Case #3: Space Journey Calculator
+========================================
+Test Input:
+- User name: "Eric Petross"
+- Origin country: "United States"
+- Travel year: 2030
+- Destination: Moon (384,400 km from Earth)
+- Travel velocity: 10,000 km/h
+
+Test Output:
+1. Calculation of travel time: approximately 38.44 hours
+2. Formatted journey details including:
+   - Traveler information
+   - Journey parameters
+   - Calculated travel duration in appropriate units
+   - Additional information like fuel requirements (enhanced version)
+
+Test Assumptions:
+- Input validation handles appropriate ranges for velocity and year
+- Distance calculations use straight-line measurements
+- No consideration for acceleration/deceleration periods
+
+Test Results:
+Success - Both standard and enhanced calculators correctly computed travel times based on distance and velocity inputs while properly formatting the output for readability.
+
+========================================
+Test Case #4: Enhanced Features
+========================================
+Test Input:
+- Execution of enhanced calculator versions with intentional invalid inputs:
+  * Year: 2010 (before minimum allowed)
+  * Velocity: 150,000 km/h (exceeding vehicle capability)
+
+Test Output:
+1. Appropriate error messages explaining why inputs are invalid
+2. Guidance on acceptable input ranges
+3. Log entries documenting the validation failures
+4. Opportunity to correct inputs without restarting application
+
+Test Assumptions:
+- Enhanced versions implement robust input validation
+- Logging system captures errors at appropriate severity levels
+- Error messages are user-friendly and informative
+
+Test Results:
+Success - The enhanced calculators correctly identified invalid inputs, displayed helpful error messages, logged the issues, and allowed for input correction within the running application.
